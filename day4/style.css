@@ -1,0 +1,166 @@
+/* 1. Box-Sizing Reset */
+* {
+  box-sizing: border-box;
+}
+
+/* 2. Light Theme Colours */
+:root {
+  --page-bg: #f4f4f9;
+  --text-color: #333333;
+  --header-bg: #2c3e50;
+  --header-text: #ffffff;
+  --card-bg: #ffffff;
+  --input-bg: #ffffff;
+  --border-color: #cccccc;
+  --button-bg: #2c3e50;
+  --button-hover: #34495e;
+  --warning-color: #b45309;
+  --over-color: #dc2626;
+}
+
+/* 3. Dark Theme Colours */
+body.dark {
+  --page-bg: #1e1e2f;
+  --text-color: #eeeeee;
+  --header-bg: #151b26;
+  --header-text: #ffffff;
+  --card-bg: #2a2a3d;
+  --input-bg: #202033;
+  --border-color: #55556b;
+  --button-bg: #485a75;
+  --button-hover: #5a6f8e;
+  --warning-color: #fbbf24;
+  --over-color: #ff6b75;
+}
+
+/* 4. Base Body Styles */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: var(--page-bg);
+  color: var(--text-color);
+}
+
+/* 5. Header */
+header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+}
+
+/* 6. Main Content */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* 7. Content Card */
+section {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+/* 8. Textarea Label */
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+/* 9. Textarea */
+textarea {
+  display: block;
+  width: 100%;
+  min-height: 180px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--button-bg);
+  box-shadow: 0 0 0 3px rgba(100, 130, 170, 0.25);
+}
+
+/* 10. Character and Word Counters */
+#char-count,
+#word-count {
+  margin: 0 0 0.75rem;
+}
+
+/* Warning: above 180 characters */
+.warning {
+  color: var(--warning-color);
+}
+
+/* Over the limit: above 200 characters */
+.over {
+  color: var(--over-color);
+  font-weight: bold;
+}
+
+/* 11. Buttons */
+button {
+  background-color: var(--button-bg);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  margin: 0.25rem 0.25rem 0.25rem 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+/* 12. Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: var(--text-color);
+}
+
+/* 13. Responsive Design */
+@media (max-width: 600px) {
+  header {
+    padding: 1rem 0.5rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  main {
+    margin: 1rem auto;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  button {
+    padding: 0.65rem 1rem;
+  }
+}
